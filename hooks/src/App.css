@@ -1,10 +1,10 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.container{
+/* .state-container {
   width: 60%;
   display: flex;
   justify-content: center;
@@ -15,23 +15,76 @@
   flex-direction: column;
 }
 
-.state-container{
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  margin: auto;
-  row-gap: 20px;
-  height: 200px;
-  flex-direction: column;
-}
-
-.state-container input{
+.state-container input {
   padding: 10px;
   border-radius: 10px;
 }
 
-.state-container p{
+.state-container p {
   text-transform: uppercase;
   color: black;
 }
+
+.todo-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: auto;
+  row-gap: 20px;
+  height: 200px;
+  flex-direction: column;
+}
+
+.todo-container h1{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/*  */
+
+.tiles {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 300px;
+}
+img{
+  width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.tile.revealed {
+  background-color: white;
+}
+
+.message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
