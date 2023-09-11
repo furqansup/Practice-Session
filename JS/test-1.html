@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    section {
+      width: 80%;
+      border: 1px solid;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      border: 1px solid;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .image{
+        width: 150px;
+    }
+  </style>
+  <body>
+    <section>
+      <form id="myForm">
+        <h1>Form</h1>
+        <input type="text" placeholder="name" class="name" />
+        <input type="text" placeholder="position" class="position" />
+        <input type="url" placeholder="add img url" class="image" />
+        <input type="submit" class="submit" />
+      </form>
+    </section>
+  </body>
+</html>
+<script>
+  function add() {
+    const name = document.querySelector(".name").value;
+    const position = document.querySelector(".position").value;
+    const image = document.querySelector(".image").value;
+
+    const formData = {
+      name,
+      position,
+      image,
+    };
+
+    const formDataArr = JSON.parse(localStorage.getItem("formDataArray")) || [];
+
+    formDataArr.push(formData);
+
+    localStorage.setItem("formDataArray", JSON.stringify(formDataArr));
+
+    name.value = "";
+    position.value = "";
+    image.value = "";
+  }
+
+  document.querySelector("#myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    add()
+  });
+</script>
