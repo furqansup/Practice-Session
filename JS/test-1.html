@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admin</title>
   </head>
   <style>
     section {
@@ -25,8 +25,15 @@
     h1 {
       text-align: center;
     }
-    .image{
-        width: 150px;
+    .image {
+      width: 150px;
+    }
+    a{
+        padding: 10px;
+        background-color: salmon;
+        color: black;
+        text-decoration: none;
+        margin-top: 50px;
     }
   </style>
   <body>
@@ -39,6 +46,7 @@
         <input type="submit" class="submit" />
       </form>
     </section>
+    <a href="test-2.html">Go to inventory</a>
   </body>
 </html>
 <script>
@@ -66,6 +74,6 @@
 
   document.querySelector("#myForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    add()
+    add();
   });
 </script>
