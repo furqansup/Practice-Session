@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+  </head>
+  <style>
+    .products {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      place-items: center;
+    }
+    a {
+      padding: 10px;
+      background-color: salmon;
+      color: black;
+      text-decoration: none;
+      margin-top: 50px;
+    }
+  </style>
+  <body>
+    <a href="test-1.html">Go back</a>
+    <div class="products"></div>
+  </body>
+</html>
+<script>
+  let productsDiv = document.querySelector(".products");
+  const formDataArr = JSON.parse(localStorage.getItem("formDataArray"));
+
+  function remove() {
+    formDataArr.splice(1, 1);
+  }
+
+  formDataArr.forEach((data) => {
+    const div = document.createElement("div");
+    const name = document.createElement("h1");
+    name.innerText = data.name;
+
+    const img = document.createElement("img");
+    img.src = data.image;
+
+    const position = document.createElement("p");
+    position.innerText = data.position;
+
+    div.append(name, img, position);
+    productsDiv.appendChild(div);
+  });
+</script>
