@@ -7,6 +7,7 @@ const weatherIcons = {
   Snow: "images/snow.png",
   Rain: "images/raining.png",
   Thunderstorm: "images/thunder.png",
+  Mist: "images/fog.png",
 };
 
 const apiKey = "16c3ebfd3c3467033c3c45f463500fb1";
