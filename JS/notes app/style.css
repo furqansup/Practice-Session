@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-color: #835c5a;
+  opacity: 0.8;
+  background-image: radial-gradient(#2e9121 0.5px, #835c5a 0.5px);
+  background-size: 10px 10px;
+}
+
+.container {
+  margin: 60px auto;
+  width: 40%;
+  max-width: 500px;
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 30px 0;
+}
+
+.header h1 {
+  font-size: 35px;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+}
+
+.note-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-add img {
+  width: 30px;
+}
+
+.note-add input {
+  padding: 5px 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+}
+
+.notes {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  row-gap: 20px;
+}
+
+.notes div {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: cadetblue;
+  border-radius: 10px;
+  height: 150px;
+  width: auto;
+  position: relative;
+}
+
+.notes div p + p {
+  font-weight: 600;
+}
+
+.delete{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%; 
+  }
+
+  .notes {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .notes div {
+    height: auto; /
+  }
+
+  .delete{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Adjustments for phones */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /
+  }
+
+  .notes {
+    grid-template-columns: 1fr; 
+  }
+}
